@@ -1,29 +1,45 @@
-import namso from "namso-cc-gen"
-let handler = async (m, { conn, text, command, usedPrefix, args }) => {
-    let response = args.join(' ').split('|')
-    if (!response[0].includes(`x`)) throw `Asegurese de que los digitos contengan una 'x' en los espacios faltantes`
-    //let split = '|'
-    //if (!text.includes(split)) throw `test`
-    //if (`${response[1]}`.length != 2) throw `El codigo de mes debe tener 2 digitos`
-    //if (`${response[2]}`.length > 4) throw `El codigo de año solo debe contener 2 digitos`
-    //let msgwait = await conn.sendMessage(m.chat, {text: wait}, {quoted: m})
-    let mes = response[1] || "rnd";
-    let ano = response[2] || "rnd";
-    let cvc = response[3] || "rnd";
-    let res = await namso.gen({
-        ShowCCV: true,
-        CCV: cvc,
-        ShowExpDate: true,
-        ShowBank: false,
-        Month: mes,
-        Year: ano,
-        Quantity: "10",
-        Bin: response[0],
-        Format: "PIPE"
-       })
-       conn.sendMessage(m.chat, {text: res}, {quoted: m})
-}
-handler.command = handler.help = ['gen','ivgen']
-handler.tags = ['tools']
+//CÓDIGO CREADO POR elias1524 : https://github.com/elias1524 actualizar todo el dia
 
-export default handler
+const handler = async (m, {conn, text, isPrems}) => {
+if (!db.data.chats[m.chat].game) throw `𝙀𝙨𝙩𝙚 𝙟𝙪𝙚𝙜𝙤𝙨 𝙚𝙨𝙩𝙖 𝙙𝙚𝙨𝙖𝙘𝙩𝙞𝙫𝙖𝙙𝙤 𝙥𝙤𝙧 𝙡𝙤𝙨 𝙖𝙙𝙢𝙞𝙣𝙨 𝙙𝙚𝙡 𝙂𝙧𝙪𝙥𝙤 𝙨𝙞 𝙩𝙪 𝙚𝙧𝙚𝙨 𝙖𝙙𝙢𝙞𝙣𝙨 𝙮 𝙦𝙪𝙞𝙚𝙧𝙚 𝙖𝙘𝙩𝙞𝙫𝙖𝙧𝙡𝙤 𝙪𝙨𝙖𝙧: .True Juegos` 
+const date = global.db.data.users[m.sender].juegos + 10800000; //10800000 = 3 hs 
+if (new Date - global.db.data.users[m.sender].juegos < 10800000) throw `『⏰』𝙀𝙨𝙥𝙚𝙧𝙖 : ${msToTime(date- new Date())} para volver a tener tu cuenta`
+if (global.db.data.users[m.sender].exp < 0 || global.db.data.users[m.sender].money < 0 || global.db.data.users[m.sender].limit < 0) return m.reply(`[ ⚠️ ] No tenes money`)
+let user = global.db.data.users[m.sender]
+const prem = Math.floor(Math.random() * 3600000) 
+const exp = Math.floor(Math.random() * 8500)
+const diamond = Math.floor(Math.random() * 130)
+const money = Math.floor(Math.random() * 8500)
+let rulet = ['text', 'text2', 'text3', 'text4', 'text5', 'text6']; 
+let ruleta = rulet[Math.floor(Math.random() * 6)]
+global.db.data.users[m.sender].juegos = new Date * 1;
+if (ruleta === 'text') return m.reply(` 𝙌𝙐𝙀 𝘽𝙐𝙀𝙉𝘼 𝙎𝙐𝙀𝙍𝙏𝙀 🐞🍀\n*𝙊𝙗𝙩𝙞𝙚𝙣𝙚 una cuenta de Disney* melissafox73@gmail.com 
+Jorbbie01 Disfruta!!`).catch(global.db.data.users[m.sender].exp += exp) 
+if (ruleta === 'text2') return m.reply(`😿 𝙉𝙊𝙊 𝙀𝙎𝙏𝘼𝙎 𝘿𝙀 𝙈𝘼𝙇𝘼 𝙎𝙐𝙀𝙍𝙏𝙀 𝘼𝘾𝘼𝘽𝘼 𝘿𝙀 𝙋𝙀𝙍𝘿𝙀𝙍 : ${exp} XP`).catch(global.db.data.users[m.sender].exp -= exp) 
+if (ruleta === 'text3') return conn.groupParticipantsUpdate(m.chat, [m.sender], 'demote').catch(m.reply(`😹 𝙀𝙎𝙏𝘼𝙎 𝙍𝙀 𝙈𝘼𝙇𝘼 𝙌𝙐𝙀 𝙌𝙐𝙄𝙏𝙊 𝙀𝙇 𝙋𝙊𝘿𝙀𝙍 𝘼𝙃𝙊𝙍𝘼 𝙔𝘼 𝙉𝙊 𝙀𝙍𝙀𝙎 𝘼𝘿𝙈𝙄𝙉𝙎 𝙅𝙊𝘿𝙀𝙍𝙏𝙀 😹😹😹`)) 
+if (ruleta === 'text4') return conn.groupParticipantsUpdate(m.chat, [m.sender], 'promote').catch(m.reply(`😼 𝙀𝙎𝙏𝘼 𝙍𝙀 𝘽𝙐𝙀𝙉𝘼 😉, 𝘼𝙝𝙤𝙧𝙖 𝙚𝙧𝙚𝙨 𝙪𝙣 𝙖𝙙𝙢𝙞𝙣𝙞𝙨𝙩𝙧𝙖𝙙𝙤𝙧, 𝙚𝙡 𝙦𝙪𝙚 𝙦𝙪𝙞𝙩𝙖𝙧 𝙖𝙙𝙢𝙞𝙣𝙨 𝙚𝙨 𝙛𝙖𝙣 𝙙𝙚 𝙠𝙪𝙣𝙤 😂`)) 
+if (ruleta === 'text5') return m.reply(`𝙒𝙐𝙐𝙐 𝙎𝙀𝙉̃𝙊𝙍 𝙀𝙎𝙏𝘼 𝘿𝙀 𝙎𝙐𝙀𝙍𝙏𝙀, 𝙑𝘼𝙔𝘼𝙍 𝘼 𝙅𝙐𝙂𝘼𝙍 𝘼𝙇 𝘾𝘼𝙎𝙄𝙉𝙊 🎰\n*𝙂𝘼𝙉𝘼𝙍𝙏𝙀 :* ${diamond} 💎`).catch(global.db.data.users[m.sender].diamond += diamond) 
+if (ruleta === 'text6') return m.reply(`👑 𝙂𝙐𝘼𝘼 𝙀𝙎𝙏𝘼𝙎 𝙍𝙀 𝘽𝙐𝙀𝙉𝘼 𝙎𝙐𝙀𝙍𝙏𝙀 𝙂𝘼𝙉𝘼𝙍𝙏𝙀 𝙎𝙀𝙍 𝙋𝙍𝙀𝙈𝙄𝙐𝙈 𝙋𝙊𝙍 : 1 𝙃𝙤𝙧𝙖 ⏰`).catch(global.db.data.users[m.sender].premium += prem) 
+}
+handler.help = ['cuentas', 'cuenta', 'Cuentaa']
+handler.tags = ['Cuentas']
+handler.command = /^(Cuentas|cuenta|Cuentaa)$/i
+handler.fail = null;
+handler.group = true
+handler.register = true
+export default handler;
+
+function msToTime(duration) {
+var milliseconds = parseInt((duration % 1000) / 100),
+seconds = Math.floor((duration / 1000) % 60),
+minutes = Math.floor((duration / (1000 * 60)) % 60),
+hours = Math.floor((duration / (1000 * 60 * 60)) % 24)
+hours = (hours < 10) ? "0" + hours : hours
+minutes = (minutes < 10) ? "0" + minutes : minutes
+seconds = (seconds < 10) ? "0" + seconds : seconds
+return hours + " Hora(s) " + minutes + " Minuto(s)"}
+
+
+function pickRandom(list) {
+  return list[Math.floor(list.length * Math.random())];
+}
