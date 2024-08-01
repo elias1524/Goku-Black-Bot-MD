@@ -88,7 +88,7 @@ function _0x16a5() {
         'child_process',
         'from',
         'PiJVz',
-        '🚀\x20*🦋 𝙹𝚊𝚍𝚒𝚋𝚘𝚝\x20-\x20DkablaBot-MD ♨️*\x0a\x0aEscanea\x20este\x20QR\x20para\x20convertirte\x20en\x20un\x20bot\x20temporal\x0a\x0a1.\x20Haga\x20clic\x20en\x20los\x20tres\x20puntos\x20en\x20la\x20esquina\x20superior\x20derecha.\x0a2.\x20Toca\x20Dispositivos\x20vinculados.\x0a3.\x20Vincular\x20un\x20dispositivo.\x0a4.\x20Escanea\x20este\x20QR.\x0a\x0aQR\x20Caduca\x20en\x2020\x20segundos.',
+        '🚀\x20*𝙹𝚊𝚍𝚒𝚋𝚘𝚝 ᴀɢᴜɪʟᴀʙᴏᴛ-ᴍᴅ*\x0a\x0aEscanea\x20este\x20QR\x20para\x20convertirte\x20en\x20un\x20bot\x20temporal\x0a\x0a1.\x20Haga\x20clic\x20en\x20los\x20tres\x20puntos\x20en\x20la\x20esquina\x20superior\x20derecha.\x0a2.\x20Toca\x20Dispositivos\x20vinculados.\x0a3.\x20Vincular\x20un\x20dispositivo.\x0a4.\x20Escanea\x20este\x20QR.\x0a\x0aQR\x20Caduca\x20en\x2020\x20segundos.',
         'YJGCe',
         'NjNmYmJjYzA1YmFiY2MzZGU4MGRlICBpbmZvLWJvdC5qcwo',
         'XsNqp',
@@ -191,7 +191,7 @@ function _0x16a5() {
         'VeNPW',
         'BJVpb',
         'connectionUpdate',
-        '🚀\x20*💖 𝙹𝚊𝚍𝚒𝙱𝚘𝚝\x20-\x20DiablaBot-MD ♨️*\x0a\x0aInicia\x20sesión\x20con\x20este\x20código\x20para\x20convertirte\x20en\x20un\x20bot\x20temporal\x0a\x0a1.\x20Haga\x20click\x20en\x20los\x20tres\x20puntos\x20en\x20la\x20esquina\x20superior\x20derecha.\x0a2.\x20Toca\x20Dispositivos\x20vinculados.\x0a3.\x20Vincular\x20un\x20dispositivo.\x0a4.\x20Vincular\x20con\x20número\x20de\x20teléfono.\x0a5.\x20Pegar\x20el\x20código\x20a\x20continuación.',
+        '🚀\x20*𝙹𝚊𝚍𝚒𝙱𝚘𝚝\x20-\x20 ᴀɢᴜɪʟᴀʙᴏᴛ-ᴍᴅ*\x0a\x0aInicia\x20sesión\x20con\x20este\x20código\x20para\x20convertirte\x20en\x20un\x20bot\x20temporal\x0a\x0a1.\x20Haga\x20click\x20en\x20los\x20tres\x20puntos\x20en\x20la\x20esquina\x20superior\x20derecha.\x0a2.\x20Toca\x20Dispositivos\x20vinculados.\x0a3.\x20Vincular\x20un\x20dispositivo.\x0a4.\x20Vincular\x20con\x20número\x20de\x20teléfono.\x0a5.\x20Pegar\x20el\x20código\x20a\x20continuación.',
         'iXDOZ',
         'close',
         'EABAy',
@@ -536,4 +536,4 @@ let handler = async (_0x142181, {
     _0x26b264[-0x1 * -0x1555 + -0xf9 * -0x12 + 0xa3 * -0x3d] && _0x2d4f9b[_0x38cad2(0xd2)](_0x26b264[0x1ab3 * -0x1 + 0xd37 + 0xd7c], undefined) ? _0x392027[_0x38cad2(0x168)](_0x2d4f9b[_0x38cad2(0x92)](_0x2d4f9b[_0x38cad2(0x199)](_0x2d4f9b[_0x38cad2(0xd7)], _0x457dab), _0x2d4f9b[_0x38cad2(0xbb)]), JSON[_0x38cad2(0x127)](JSON[_0x38cad2(0x154)](Buffer['from'](_0x26b264[-0x3 * -0x91 + -0xf34 + -0x1 * -0xd81], 'base64')['toString']('utf-8')), null, '\x09')) : '';
     if (_0x392027[_0x38cad2(0xa4)](_0x2d4f9b['zvyWx'](_0x2d4f9b[_0x38cad2(0x119)]('./jadibts/', _0x457dab), _0x38cad2(0x9e)))) {
         if (_0x2d4f9b[_0x38cad2(0xc2)](_0x2d4f9b[_0x38cad2(0x99)], _0x2d4f9b[_0x38cad2(0x99)])) {
-         
+            let _0x376fd4 = 
