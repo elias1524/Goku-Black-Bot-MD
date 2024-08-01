@@ -1,24 +1,17 @@
-import fetch from 'node-fetch' 
-let handler = async function (m, { conn, text, usedPrefix }) {
-const apiUrl = `https://api.apis.net.pe/v2/reniec/dni?numero=${text}&token=apis-token-7946.-LODBsCL6vKrK7tS4sh0l3fgi6wK6ElW`
-fetch(apiUrl).then(response => {
-if (!response.ok) {
-return console.log('La página no esta funcionando actualmente')
-}
-return response.json()
-}).then(data => {
-const formattedResult = `
-*🔰|DNI:* ${text}
-*🎯|NOMBRE:* ${data.nombres}
-*🔴|APELLIDO PATERNO:* ${data.apellidoPaterno}
-*📊|APELLIDO MATERNO:* ${data.apellidoMaterno}
+javascript
+// Definir un array de cartas
+const cards = ["Corazón", "Diamante", "Pica", "Trébol"];
 
-> BY IVAN
-`
-m.reply(formattedResult.trim())
-}).catch(error => {
-console.error('Error:', error)
-})
+// Elegir una carta aleatoria
+const randomIndex = Math.floor(Math.random() * cards.length);
+const randomCard = cards[randomIndex];
+
+// Adivinar la carta
+const playerGuess = prompt("Adivina la carta (Corazón, Diamante, Pica, Trébol):");
+
+// Verificar si la adivinanza es correcta
+if (playerGuess.toLowerCase() === randomCard.toLowerCase()) {
+    console.log("¡Adivinaste la carta! Era " + randomCard + ".");
+} else {
+    console.log("Incorrecto. La carta era " + randomCard + ".");
 }
-handler.command = /^(dni)$/i
-export default handler
