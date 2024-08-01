@@ -4,35 +4,35 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js' 
 
   let tags = { 
-  'main': '𝐈 𝐍 𝐅 𝐎', 
-  'bot': '𝐁 𝐎 𝐓', 
-  'juegos': '𝐉 𝐔 𝐄 𝐆 𝐎 𝐒', 
-  'imagenes': '𝐈 𝐌 𝐀 𝐆 𝐄 𝐍 𝐄 𝐒', 
-  'grupo': '𝐆 𝐑 𝐔 𝐏 𝐎 𝐒', 
-  'frases': '𝐅 𝐑 𝐀 𝐒 𝐄 𝐒', 
-  'descargas': '𝐃 𝐄 𝐒 𝐂 𝐀 𝐑 𝐆 𝐀 𝐒', 
-  'nable': '𝐎 𝐍 / 𝐎 𝐅 𝐅', 
-  'internet': '𝐈 𝐍 𝐓 𝐄 𝐑 𝐍 𝐄 𝐓', 
-  'anime': '𝐀 𝐍 𝐈 𝐌 𝐄', 
-  'nable': '𝐎 𝐍 - 𝐎 𝐅 𝐅', 
-  'premium': '𝐏 𝐑 𝐄 𝐌 𝐈 𝐔 𝐌', 
-  'downloader': '𝐃 𝐄 𝐒 𝐂 𝐀 𝐑 𝐆 𝐀 𝐒', 
-  'info': '𝐈 𝐍 𝐅 𝐎', 
-  'owner': '𝐎 𝐖 𝐍 𝐄 𝐑', 
-  'nsfw': '𝐍 𝐒 𝐅 𝐖', 
-  'database': '𝐃 𝐀 𝐓 𝐀 𝐁 𝐀 𝐒 𝐄',
-  'rg': '𝐑 𝐄 𝐆 𝐈 𝐒 𝐓 𝐑 𝐎',
-  'tools': '𝐇 𝐄 𝐑 𝐑 𝐀 𝐌 𝐈 𝐄 𝐍 𝐓 𝐀 𝐒', 
-  'xp': '𝐄 𝐗 𝐏',
-  'imagene': '𝐈 𝐌 𝐀 𝐆 𝐄 𝐍 𝐄 𝐒',
-  'transformador': '𝐂 𝐎 𝐍 𝐕 𝐄 𝐑 𝐓 𝐈 𝐃 𝐎 𝐑 𝐄 𝐒',
-  'audio': '𝐀 𝐔 𝐃 𝐈 𝐎',
-  'sticker': '𝐒 𝐓 𝐈 𝐂 𝐊 𝐄 𝐑 𝐒', 
-  'ai': '𝐈 𝐀',
-  'rpg': '𝐑 𝐏 𝐆',
-  'jadibot': '𝐒 𝐔 𝐁 - 𝐁 𝐎 𝐓',
-  'menu': '𝐌 𝐄 𝐍 𝐔',
-  'own': '𝐎 𝐖 𝐍 𝐄 𝐑',
+  'main': 'ＩＮＦＯ', 
+  'bot': 'ＢＯＴ', 
+  'juegos': 'ＪＵＥＧＯＳ', 
+  'imagenes': 'ＩＭＡＧＥＮＥＳ', 
+  'grupo': 'ＧＲＵＰＯＳ', 
+  'frases': 'ＦＲＡＳＥＳ', 
+  'descargas': 'ＤＥＳＣＡＲＧＡＳ', 
+  'nable': 'ＯＮ / ＯＦＦ', 
+  'internet': 'ＩＮＴＥＲＮＥＴ', 
+  'anime': 'ＡＮＩＭＥ', 
+  'nable': 'ＯＮ - ＯＦＦ', 
+  'premium': 'ＰＲＥＭＩＵＭ', 
+  'downloader': 'ＤＥＳＣＡＲＧＡＳ', 
+  'info': 'ＩＮＦＯ', 
+  'owner': 'ＯＷＮＥＲ', 
+  'nsfw': 'ＮＳＦＷ', 
+  'database': 'ＤＡＴＡＢＡＳＥ',
+  'rg': 'ＲＥＧＩＳＴＲＯ',
+  'tools': 'ＨＥＲＲＡＭＩＥＮＴＡＳ', 
+  'xp': 'ＥＸＰ',
+  'imagene': 'ＩＭＡＧＥＮＥＳ',
+  'transformador': 'ＣＯＮＶＥＲＴＩＤＯＲＥＳ',
+  'audio': 'ＡＵＤＩＯ',
+  'sticker': 'ＳＴＩＣＫＥＲＳ', 
+  'ai': 'ＡＩ',
+  'rpg': 'ＲＰＧ',
+  'jadibot': 'ＳＵＢ-ＢＯＴ',
+  'menu': 'ＭＥＮＵ',
+  'own': 'ＯＷＮＥＲ',
 } 
 
 const defaultMenu = { 
@@ -56,9 +56,9 @@ const defaultMenu = {
 %readmore 
          *乂 ⺀ ʟɪꜱᴛᴀ - ᴄᴏᴍᴀɴᴅᴏꜱ ⺀ 乂* 
 `.trimStart(), 
-  header: '╭⁺₊⋆•̩̩͙*˚⁺‧͙⁺˚*•̩̩͙✩•̩̩͙*˚⁺‧͙ %category ⁺₊⋆•̩̩͙*˚⁺‧͙⁺˚*•̩̩͙✩•̩̩͙*˚⁺‧͙╮\n> ╭～●～●～●●～●～', 
-  body: '> │➻ *%cmd*\n', 
-  footer: '> ╰～●～●～●●～●～\n╰═• ೋ✧๑🌟️๑✧ೋ ≪•◦ ❈ ◦•≫╯', 
+  header: '╭═• ೋ✧๑ %category ๑✧ೋ •═╮\n> ╭─────────────────', 
+  body: '> │◉ *%cmd*\n', 
+  footer: '> ╰─────────────────\n╰═• ೋ✧๑🌟️๑✧ೋ •════╯', 
   after: '', 
 } 
 
@@ -166,13 +166,23 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
 
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png');
 
-await conn.reply(m.chat, '✰【𝐄𝐧𝐯𝐢𝐚𝐧𝐝𝐨 𝐄𝐥 𝐌𝐞𝐧𝐮】✰ . . .*', fkontak, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '🍁 Goku-Black-Bot-MD 🌸', body: '👋 Hola ' + name, sourceUrl: global.md, thumbnail: await (await fetch(pp)).buffer() }}})
-    
-    let pp1 = 'https://telegra.ph/file/400e00bbc72c7a65cc5ef.mp4'
-    let pp2 = 'https://telegra.ph/file/62f5ae0557466d75b62d7.mp4'
+await conn.reply(m.chat, '✰【𝐄𝐧𝐯𝐢𝐚𝐧𝐝𝐨 𝐄𝐥 𝐌𝐞𝐧𝐮】✰ . . .*', fkontak, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '✰ 𝐁𝐚𝐢𝐥𝐞𝐲 𝐁𝐨𝐭 - 𝐌𝐃 ✰', body: '👋 Hola ' + name, sourceUrl: global.md, thumbnail: await (await fetch(pp)).buffer() }}})
 
-    m.react('🌸') 
+    let pp1 = 'https://telegra.ph/file/56c0806bcba5406a4844b.mp4'
+    let pp2 = 'https://telegra.ph/file/1280f3f0e69467d2d34c6.mp4'
+
+ m.react('🪷') 
     conn.sendMessage(m.chat, { video: { url: [pp1, pp2].getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: m }) 
+
+/*let listSections = []    
+listSections.push({
+title: '',
+rows: [{ header: "Menu Completo", title: "", id: `.allmenu`, description: `Para ver todos los comandos\n` }, { header: "Sub-bot", title: "", id: `.jadibot --code`, description: `Para volverte sub-bot 🤖\n` },
+{ header: "Velocidad", title: "", id: `.ping`, description: `Ver velocidad del bot\n` },
+{ header: "Play", title: "", id: `.play`, description: `Descarga tus musicas favoritas 🎧\n` },
+{ header: "creador", title: "", id: `.owner`, description: `Contacta a mi creador` }
+]})
+await conn.sendList(m.chat, '👋🏻 Hola¡! Bienvenido A Mi Sub Menú\n\n*Creador:* Jxtxn17\n*Versión:* ${vs}\n\n si hay algún error puedes contactarme, usa el comando: .owner\n\nGracias¡! 🔴', null, `Selecione la opción correcta`, listSections, { mentions: [m.sender]}, {quoted: m})*/
 
   } catch (e) { 
     conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error.', m, fake, ) 
@@ -182,7 +192,7 @@ await conn.reply(m.chat, '✰【𝐄𝐧𝐯𝐢𝐚𝐧𝐝𝐨 𝐄𝐥 𝐌�
 
 handler.help = ['menu'] 
 handler.tags = ['main'] 
-handler.command = ['menu', 'help', 'allmenu', 'menù'] 
+handler.command = ['', 'help', 'allmenu'] 
 handler.register = true 
 export default handler 
 
