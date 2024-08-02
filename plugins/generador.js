@@ -3,7 +3,7 @@
 const handler = async (m, {conn, text, isPrems}) => {
 if (!db.data.chats[m.chat].game) throw `Las cuentas de hoy no está disponible debes de preguntar al dueño .enable cuentas` 
 const date = global.db.data.users[m.sender].juegos + 10800000; //10800000 = 3 hs 
-if (new Date - global.db.data.users[m.sender].juegos < 10800000) throw `,⌛ *Espera* : ${msToTime(date- new Date())} para volver a tener tu cuenta`
+if (new Date - global.db.data.users[m.sender].juegos < 10800000) throw `⌛ *Espera* : ${msToTime(date- new Date())} para volver a tener tu cuenta`
 if (global.db.data.users[m.sender].exp < 0 || global.db.data.users[m.sender].money < 0 || global.db.data.users[m.sender].limit < 0) return m.reply(`⚠️ *No tenes money rey*`)
 let user = global.db.data.users[m.sender]
 const prem = Math.floor(Math.random() * 3600000) 
