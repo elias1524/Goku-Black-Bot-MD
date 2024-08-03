@@ -72,6 +72,6 @@ sourceUrl: 'https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J'}}},
 { quoted: fkontak})
 }
 handler.tags =['info'] 
-handler.help = ['codesandbox', 'Servidor', 'Obte'] 
-handler.command = /^(sandbox|box|sand|server)$/i
+handler.help = ['olympus', 'host', 'Obte'] 
+handler.command = /^(olympus|servidor|Hostt|server)$/i
 export default handler
