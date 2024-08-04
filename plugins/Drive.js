@@ -20,3 +20,10 @@ function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())];
 }const date = global.db.data.users[m.sender].juegos + 10800000; //10800000 = 3 hs 
 if (new Date - global.db.data.users[m.sender].juegos < 10800000) throw `⏰𝙀𝙨𝙥𝙚𝙧𝙖 : ${msToTime(date - new Date())} `
+handler.help = ['Prueba', 'Xd', 'GH']
+handler.tags = ['juegos']
+handler.command = /^(Date|Prueba|xd)$/i
+handler.fail = null;
+handler.group = true
+handler.register = true
+export default handler;
