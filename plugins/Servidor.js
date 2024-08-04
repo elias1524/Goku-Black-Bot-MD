@@ -25,10 +25,10 @@ _INICIAS O ALOJAS DE FORMA GRATUITA CON 4GB DE ESPACIO PARA CUALQUIER ESPECIALID
 _https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J_
 
 *_CREADOR_*
-_wa.me/593979133620_
+_wa.me/595972157130_
 
 *_PAGOS PARA EL VIP_*
-_wa.me/593979133620_
+_wa.me/595972157130_
 *\`🍁 Te presentamos un nuevo server: "OLYMPUS-HOST"\`*
 
 *¿Muy lento tu Samsung J1 y necesitas tener activo tu bot 24/7?*
@@ -57,7 +57,7 @@ https://kingsvhost.asifofc.xyz
 https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J
 
 📱 *Contacto*
-wa.me/593979133620`
+wa.me/595972157130`
 await conn.sendMessage(m.chat, { text: txt,
 contextInfo:{
 forwardingScore: 9999999,
