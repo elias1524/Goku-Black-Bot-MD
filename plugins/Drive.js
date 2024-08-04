@@ -1,26 +1,22 @@
-import fg from 'api-dylux'  
-let handler = async (m, { conn, args, usedPrefix, command }) => {
+const handler = async (m, {conn, text, isPrems}) => {
+if (!db.data.chats[m.chat].game) throw `comando de prueba %name`
+handler.fail = null;
+handler.group = true
+handler.register = true
+export default handler;
 
-	if (!args[0]) throw `✳️ Ingrese un link de Google Drive`
-	m.react(rwait) 
-	try {
-	let res = await fg.GDriveDl(args[0])
-	 await m.reply(`
-≡ *Google Drive DL*
-▢ *Nombre:* ${res.fileName}
-▢ *Tamaño:* ${res.fileSize}
-▢ *tipo:* ${res.mimetype}`)
-		
-	conn.sendMessage(m.chat, { document: { url: res.downloadUrl }, fileName: res.fileName, mimetype: res.mimetype }, { quoted: m })
-	m.react(done)
-   } catch {
-	m.reply('Error: Revisa el link o intenta con otro link') 
-  }
-}
-handler.help = ['gdrive']
-handler.tags = ['dl', 'prem']
-handler.command = ['gdrive']
-handler.diamond = true
-handler.premium = true
+function msToTime(duration) {
+var milliseconds = parseInt((duration % 1000) / 100),
+seconds = Math.floor((duration / 1000) % 60),
+minutes = Math.floor((duration / (1000 * 60)) % 60),
+hours = Math.floor((duration / (1000 * 60 * 60)) % 24)
+hours = (hours < 10) ? "0" + hours : hours
+minutes = (minutes < 10) ? "0" + minutes : minutes
+seconds = (seconds < 10) ? "0" + seconds : seconds
+return hours + " Hora(s) " + minutes + " Minuto(s)"}
 
-export default handler
+
+function pickRandom(list) {
+  return list[Math.floor(list.length * Math.random())];
+}const date = global.db.data.users[m.sender].juegos + 10800000; //10800000 = 3 hs 
+if (new Date - global.db.data.users[m.sender].juegos < 10800000) throw `⏰𝙀𝙨𝙥𝙚𝙧𝙖 : ${msToTime(date - new Date())} `
