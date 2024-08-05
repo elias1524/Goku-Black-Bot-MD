@@ -1,24 +1,53 @@
 import fetch from 'node-fetch'
 
-const regex = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
-var handler = async (m, { args, usedPrefix, command }) => {
+let regex = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
+let handler = async (m, { args, usedPrefix, command }) => {
+  //let img = 'https://telegra.ph/file/78d5468b09fa913567731.png'
+  let textbot = '🚩 ¡Bot Multi Device!'
+  if (!args[0]) {
+    return conn.reply(m.chat, `🚩 Escribe la URL de un repositorio de GitHub que deseas descargar.`, m, rcanal)
+  }
+  if (!regex.test(args[0])) {
+    return conn.reply(m.chat, `Verifica que la *URL* sea de GitHub`, m, rcanal).then(_ => m.react(error))
+  }
+  let [_, user, repo] = args[0].match(regex) || []
+  let sanitizedRepo = repo.replace(/.git$/, '')
+  let repoUrl = `https://api.github.com/repos/${user}/${sanitizedRepo}`
+  let zipUrl = `https://api.github.com/repos/${user}/${sanitizedRepo}/zipball`
+  await m.react(rwait)
+  try {
+  conn.reply(m.chat, wait, m, {
+  contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
+  title: packname,
+  body: wm,
+  previewType: 0, thumbnail: icons,
+  sourceUrl: channel }}})
+    let [repoResponse, zipResponse] = await Promise.all([
+      fetch(repoUrl),
+      fetch(zipUrl),
+    ])
+    let repoData = await repoResponse.json()
+    let filename = zipResponse.headers.get('content-disposition').match(/attachment; filename=(.*)/)[1]
+    let type = zipResponse.headers.get('content-type')
+    let img = 'https://i.ibb.co/tLKyhgM/file.png'
+    let txt = `*乂  G I T H U B  -  D O W N L O A D*\n\n`
+       txt += `✩  *Nombre* : ${sanitizedRepo}\n`
+       txt += `✩  *Repositorio* : ${user}/${sanitizedRepo}\n`
+       txt += `✩  *Creador* : ${repoData.owner.login}\n`
+       txt += `✩  *Descripción* : ${repoData.description || 'Sin descripción disponible'}\n`
+       txt += `✩  *Url* : ${args[0]}\n\n`
+       txt += `⁖❤️꙰  *${textbot}*`
 
-if (!args[0]) return conn.reply(m.chat, `🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *ᥱᥒ᥎іᥲr ᥴ᥆mᥲᥒძ᥆:*\n!gitclone rᥱ⍴᥆sі𝗍᥆rі᥆\n\n[ 💡 ] ᥱȷᥱm⍴ᥣ᥆, !gitclone ${md}`, m, fake, )
-if (!regex.test(args[0])) conn.reply(m.chat, `🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *ᥒ᥆ ᥱs ᥙᥒ ᥱᥒᥣᥲᥴᥱ ᥎ᥲ́ᥣіძ᥆*`, m, fake, )
-
-let [_, user, repo] = args[0].match(regex) || []
-repo = repo.replace(/.git$/, '')
-let url = `https://api.github.com/repos/${user}/${repo}/zipball`
-let filename = (await fetch(url, { method: 'HEAD' })).headers.get('content-disposition').match(/attachment; filename=(.*)/)[1]
-conn.reply(m.chat, `🚫 𝐀𝐓𝐄𝐍𝐂𝐈𝐎𝐍 🚫 ᥱs⍴ᥱrᥱ ᥙᥒ m᥆mᥱᥒ𝗍᥆`, m, fake, )
-conn.sendFile(m.chat, url, filename, null, m)
-
+await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
+await conn.sendFile(m.chat, await zipResponse.buffer(), filename, null, m)
+await m.react(done)
+  } catch {
+await m.react(error)
+  }
 }
-handler.help = ['gitclone']
+handler.help = ['gitclone *<url git>*']
 handler.tags = ['descargas']
-handler.command = /gitclone|clonarepo|clonarrepo|repoclonar/i
-
-handler.limit = true
-handler.register = true
-
+handler.command = /^(gitclone)$/i
+handler.register = true 
+//handler.star = 1
 export default handler
