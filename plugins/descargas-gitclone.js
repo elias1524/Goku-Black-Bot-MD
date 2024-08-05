@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 const regex = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i;
 const handler = async (m, {args, usedPrefix, command}) => {
   if (!args[0]) throw `🚩 Escribe la URL de un repositorio de GitHub que deseas descargar.`;
-  if (!regex.test(args[0])) throw '[❗*INFO*❗] *LINK* *INCORRECTO!*';
+  if (!regex.test(args[0])) throw '*[❗INFO*❗] *LINK* *INCORRECTO!*';
   let [_, user, repo] = args[0].match(regex) || [];
   repo = repo.replace(/.git$/, '');
   const url = `https://api.github.com/repos/${user}/${repo}/zipball`;
