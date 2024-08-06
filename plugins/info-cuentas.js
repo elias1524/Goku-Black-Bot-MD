@@ -7,7 +7,7 @@ ${ivan}`
 await conn.sendFile(m.chat, foto, 'Curiosity.jpg', texto, estilo)}
 
 handler.tags = ['main']
-handler.command = /^gruposcb|grupos|gruposofc$/i
+handler.command = /^Cuentaig|Cuentaoficial|Cuentaofc$/i
 handler.exp = 35
 handler.register = true
 export default handler
