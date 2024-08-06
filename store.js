@@ -42,8 +42,9 @@ global.img14 = 'https://telegra.ph/file/dcd01728e3c069a6654f2.jpg'
 global.ImgAll = [img, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14]
 
 //Enlaces
+global.ivan = 'https://www.instagram.com/jesus_gom19?igsh=bDk2bHlrN2VxeW15'
 global.yt = 'https://www.youtube.com/@Azami_Mods'
-global.ig = 'https://www.instagram.com/b.jxtxn17'
+global.ig = ''
 global.md = 'https://github.com/elias1524/Goku-Black-Bot-MD'
 global.paypal = '+595972157130'
 global.git = 'https://github.com/elias1524'
