@@ -7,7 +7,7 @@ const readMore = more.repeat(4001)
 let txt = *`BERMUDA`*
 await conn.sendFile(m.chat, img, "Thumbnail.jpg", txt, m, null, rcanal)
 }
-handler.help = ['Bermuda']
-handler.tags = ['Bermuda']
-handler.command = /^(Bermuda)$/i
+handler.help = ['Cd']
+handler.tags = ['vd']
+handler.command = /^(Md)$/i
 export default handler
